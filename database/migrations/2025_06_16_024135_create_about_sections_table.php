@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('about_sections', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->longText('description');
+            $table->json('tech_badges');
             $table->timestamps();
         });
     }
