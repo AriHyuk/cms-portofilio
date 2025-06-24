@@ -21,5 +21,11 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('arixyz123'), // Ensure to hash the password
 
         ]);
+        
+        $this->call([
+        AdminUserSeeder::class,
+]);
+
     }
+    
 }
