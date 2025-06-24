@@ -6,13 +6,16 @@ use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\CertificateController;
 use App\Http\Controllers\Api\HeroSectionController;
 use App\Http\Controllers\Api\AboutProfileController;
+use App\Http\Controllers\Api\AboutSectionController;
+
+Route::get('/about-section', [AboutSectionController::class, 'index']);
 
 Route::get('/about-profile', [AboutProfileController::class, 'index']);
+
 Route::get('/hero', [HeroSectionController::class, 'index']);
 Route::get('/hero/{id}', [HeroSectionController::class, 'show']);
 Route::put('/hero/{id}', [HeroSectionController::class, 'update']);
 Route::patch('/hero/{id}', [HeroSectionController::class, 'update']);
-
 
 Route::get('/certificates', [CertificateController::class, 'index']);
 Route::get('/certificates/{id}', [CertificateController::class, 'show']);
