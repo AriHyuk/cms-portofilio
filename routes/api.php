@@ -7,6 +7,13 @@ use App\Http\Controllers\Api\CertificateController;
 use App\Http\Controllers\Api\HeroSectionController;
 use App\Http\Controllers\Api\AboutProfileController;
 use App\Http\Controllers\Api\AboutSectionController;
+use App\Http\Controllers\Api\SkillController;
+use App\Http\Controllers\Api\ExperienceController;
+use App\Http\Controllers\Api\ServiceController;
+
+Route::get('/skills', [SkillController::class, 'index']);
+Route::get('/experiences', [ExperienceController::class, 'index']);
+Route::get('/services', [ServiceController::class, 'index']);
 
 Route::get('/about-section', [AboutSectionController::class, 'index']);
 
