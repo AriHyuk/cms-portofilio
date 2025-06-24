@@ -3,6 +3,15 @@
 use App\Http\Controllers\Api\AppointmentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\CertificateController;
+
+Route::get('/certificates', [CertificateController::class, 'index']);
+Route::get('/certificates/{id}', [CertificateController::class, 'show']);
+Route::post('/certificates', [CertificateController::class, 'store']);
+Route::put('/certificates/{id}', [CertificateController::class, 'update']);
+Route::patch('/certificates/{id}', [CertificateController::class, 'update']);
+Route::delete('/certificates/{id}', [CertificateController::class, 'destroy']);
+
 
 Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('/projects/{id}', [ProjectController::class, 'show']);
