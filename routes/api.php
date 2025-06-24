@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\CertificateController;
 use App\Http\Controllers\Api\HeroSectionController;
+use App\Http\Controllers\Api\AboutProfileController;
 
+Route::get('/about-profile', [AboutProfileController::class, 'index']);
 Route::get('/hero', [HeroSectionController::class, 'index']);
 Route::get('/hero/{id}', [HeroSectionController::class, 'show']);
 Route::put('/hero/{id}', [HeroSectionController::class, 'update']);
